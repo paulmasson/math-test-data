@@ -11,7 +11,14 @@ ellippi             ellipticPi
 gamma               gamma
 hankel1             hankel1
 hankel2             hankel2
+hyper               hypergeometricPFQ
 hyperu              hypergeometricU
+hyp0f1              hypergeometric0F1
+hyp1f1              hypergeometric1F1
+hyp2f1              hypergeometric2F1
+laguerre            laguerre
+legenp              legendreP
+legenq              legendreQ
 struveh             struveH
 struvel             struveL
 whitm               whittakerM
