@@ -9,7 +9,7 @@ s = pre = post = ''
 # sys.argv entries are all strings!
 if len( sys.argv ) > 2:
   s = s.join( sys.argv[2:] )
-  s.replace( 'j', 'i' )
+  s = s.replace( 'j', 'i' )
   if len( sys.argv[2] ) > 2:
     pre = sys.argv[2].replace( '[', '' ).replace( ']', '' ) + ','
   if len( sys.argv ) == 4:
