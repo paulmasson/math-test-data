@@ -4,6 +4,8 @@ besseli             besselI
 besselj             besselJ
 besselk             besselK
 bessely             besselY
+cn                  cn
+dn                  dn
 ellipe              ellipticE
 ellipf              ellipticF
 ellipk              ellipticK
@@ -19,6 +21,7 @@ hyp2f1              hypergeometric2F1
 laguerre            laguerre
 legenp              legendreP
 legenq              legendreQ
+sn                  sn
 struveh             struveH
 struvel             struveL
 whitm               whittakerM

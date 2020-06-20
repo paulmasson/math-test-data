@@ -23,6 +23,7 @@ For a function with additional parameters after the main argument, include an em
 
 ```
 python complex.py ellipf [] [.5]
+python complex.py sn [] [.5]
 ```
 
 For a function with additional parameters both before and after the main argument, include two comma-separated lists. For example

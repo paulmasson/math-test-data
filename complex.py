@@ -2,6 +2,15 @@
 from mpmath import *
 import sys
 
+def sn( x, m ):
+  return ellipfun( 'sn', x, m )
+
+def cn( x, m ):
+  return ellipfun( 'cn', x, m )
+
+def dn( x, m ):
+  return ellipfun( 'dn', x, m )
+
 function = sys.argv[1]
 
 s = pre = post = ''
