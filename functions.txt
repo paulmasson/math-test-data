@@ -10,6 +10,11 @@ ellipe              ellipticE
 ellipf              ellipticF
 ellipk              ellipticK
 ellippi             ellipticPi
+ei                  expIntegralEi
+erf                 erf
+erfc                erfc
+erfi                erfi
+expint              expIntegralE
 gamma               gamma
 hankel1             hankel1
 hankel2             hankel2
