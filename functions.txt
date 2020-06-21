@@ -5,6 +5,7 @@ besselj             besselJ
 besselk             besselK
 bessely             besselY
 cn                  cn
+digamma             digamma
 dn                  dn
 ellipe              ellipticE
 ellipf              ellipticF
@@ -16,6 +17,7 @@ erfc                erfc
 erfi                erfi
 expint              expIntegralE
 gamma               gamma
+gammainc            gamma
 hankel1             hankel1
 hankel2             hankel2
 hyper               hypergeometricPFQ
@@ -23,6 +25,7 @@ hyperu              hypergeometricU
 hyp0f1              hypergeometric0F1
 hyp1f1              hypergeometric1F1
 hyp2f1              hypergeometric2F1
+kleinj              kleinJ
 laguerre            laguerre
 legenp              legendreP
 legenq              legendreQ
