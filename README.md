@@ -12,7 +12,7 @@ python complex.py function
 
 The default domain is [-49.5,49.5] in unit steps in both directions. The function name is that of mpmath, while the resulting file name corresponds to the name in Math.
 
-For a function with additional parameters before the main argument, include list with comma-separated values. Examples are
+For a function with additional parameters before the main argument, include a list with comma-separated values. Examples are
 
 ```
 python complex.py besselj [0]
