@@ -24,6 +24,7 @@ hyper               hypergeometricPFQ
 hyperu              hypergeometricU
 hyp0f1              hypergeometric0F1
 hyp1f1              hypergeometric1F1
+hyp2f0              hypergeometric2F0
 hyp2f1              hypergeometric2F1
 kleinj              kleinJ
 laguerre            laguerre
