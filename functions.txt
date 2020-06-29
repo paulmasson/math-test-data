@@ -1,3 +1,5 @@
+acos                arccos
+acosh               arccosh
 airyai              airyAi
 airybi              airyBi
 besseli             besselI
