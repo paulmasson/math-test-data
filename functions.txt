@@ -1,5 +1,15 @@
 acos                arccos
 acosh               arccosh
+acot                arccot
+acoth               arccoth
+acsc                arccsc
+acsch               arccsch
+asec                arcsec
+asech               arcsech
+asin                arcsin
+asinh               arcsinh
+atan                arctan
+atanh               arctanh
 airyai              airyAi
 airybi              airyBi
 besseli             besselI
