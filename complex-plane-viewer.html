@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Complex Plane Viewer</title>
+<link rel="stylesheet" type="text/css" href="../mathcell/docs/style.css">
+<style></style>
+</head>
+
+<body>
+
+<script src="../mathcell/build/mathcell.js"></script>
+
+<p>This web page visualizes the base-ten logarithm of the real and imaginary parts of the test data sets. Select a function:</p>
+
+<div style="text-align: center">
+Function: &nbsp; <select id="selection" onchange="update()"></select>
+<div style="display: inline-block; width: .5in"></div>
+Part: &nbsp; <select id="part" onchange="update()">
+  <option value="re">Real</option><option value="im">Imaginary</option></select>
+</div><br>
+
+<div class="mathcell" style="width: 7in; height: 6in">
+<script>
+
+var parent = document.currentScript.parentNode;
+
+var id = 'visual';
+parent.id = id;
+
+var surface;
+
+MathCell( id, [] );
+
+parent.update = function( id ) {
+
+  var config = { type: 'threejs' };
+
+  evaluate( id, [ surface ], config );
+
+}
+
+</script>
+</div>
+
+<script>
+
+var xhr = new XMLHttpRequest();
+xhr.responseType = 'text';
+xhr.open( 'GET', 'https://api.github.com/repos/paulmasson/math-test-data/contents/complex-plane', true );
+
+xhr.onload = function() {
+
+  var s = '<option>Select</option>';
+
+  var files = JSON.parse( xhr.response );
+  files.forEach( f => s += '<option>' + f.name.slice(0,-4) + '</option>' );
+
+  selection.innerHTML = s;
+
+}
+
+xhr.send();
+
+function update() {
+
+  var xhr = new XMLHttpRequest();
+  xhr.responseType = 'text';
+  xhr.open( 'GET', 'complex-plane/' + selection.value + '.txt', true );
+
+  xhr.onload = function() {
+
+    var data = xhr.response.split( '\n' );
+    data.pop();
+
+//    if ( data.includes( 'inf' ) ) alert( 'inf' );
+
+    try { data.forEach( (e,i,a) => a[i] = JSON.parse(e) ); }
+    catch(e) { alert( 'The selected file is not currently being served by GitHub' ); }
+
+    function scale( x ) {
+
+      return Math.sign(x) * Math.log10( Math.abs(x) );
+
+    }
+
+    var n = Math.sqrt(data.length), lines = [];
+
+    for ( var i = 0 ; i < data.length ; i += n ) {
+
+      var line = data.slice( i, i + n ), points = [];
+
+      line.forEach( p => {
+        var point = [ p[0], p[1] ];
+        if ( part.value = 're' ) point.push( scale(p[2]) );
+        else point.push( scale(p[3]) );
+        points.push( point );
+      } );
+
+      lines.push( points );l = lines;
+
+    }
+
+    surface = surfaceFromLines( lines );
+    visual.update( 'visual' );
+
+  }
+
+  xhr.send();
+
+}
+
+</script>
+
+<p>The test data has been evaluated in unit increments from -49.5 to 49.5 in both directions on the the complex plane. Functions requiring more that one argument, such as Bessel or elliptic functions, indicate the additional parameters in the function name in square brackets. Most of these parameters precede the main argument in the function call. When they do not an empty list is included in the file name to allow detection of these cases.</p>
+
+<p>Known issues with data from mpmath as of 2020.09.13:</p>
+
+<blockquote>The imaginary parts of error functions are <a href="https://github.com/fredrik-johansson/mpmath/issues/545">incorrect</a> in large regions of the complex plane.</blockquote>
+
+<blockquote>The imaginary part of the zeta function is <a href="https://github.com/fredrik-johansson/mpmath/issues/551">inaccurate</a> in the far right-hand plane.</blockquote>
+
+</body>
+</html>
