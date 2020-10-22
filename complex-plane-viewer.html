@@ -68,18 +68,16 @@ function update() {
 
   xhr.onload = function() {
 
-    var data = xhr.response.split( '\n' );
+    var response = xhr.response.replace( /inf/g, '1e300' );
+    var data = response.split( '\n' );
     data.pop();
-
-//    if ( data.includes( 'inf' ) ) alert( 'inf' );
 
     try { data.forEach( (e,i,a) => a[i] = JSON.parse(e) ); }
     catch(e) { alert( 'The selected file is not currently being served by GitHub' ); }
 
     function scale( x ) {
-
+      if ( x === 0 ) x = 1e-300;
       return Math.sign(x) * Math.log10( Math.abs(x) );
-
     }
 
     var n = Math.sqrt(data.length), lines = [];
@@ -95,7 +93,7 @@ function update() {
         points.push( point );
       } );
 
-      lines.push( points );l = lines;
+      lines.push( points );
 
     }
 
