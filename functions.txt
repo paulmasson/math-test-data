@@ -42,6 +42,7 @@ kleinj              kleinJ
 laguerre            laguerre
 legenp              legendreP
 legenq              legendreQ
+polylog             polylog
 sn                  sn
 struveh             struveH
 struvel             struveL
