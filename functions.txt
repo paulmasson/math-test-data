@@ -39,6 +39,7 @@ hyp1f1              hypergeometric1F1
 hyp2f0              hypergeometric2F0
 hyp2f1              hypergeometric2F1
 kleinj              kleinJ
+lambertw            lambertW
 laguerre            laguerre
 legenp              legendreP
 legenq              legendreQ
