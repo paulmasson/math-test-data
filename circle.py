@@ -36,7 +36,7 @@ x = y = start
 
 while x <= -start:
   while y <= -start:
-    z = eval( '{}({}{}+{}j{})'.format( function, pre, x, y, post ) )
+    z = eval( '{}({}{:.9e}+{:.9e}j{})'.format( function, pre, x, y, post ) )
     f.write( '[{:.9e},{:.9e},{:.9e},{:.9e}]\n'.format( x, y, float(z.real), float(z.imag) ) )
     y += step
   x += step
