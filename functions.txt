@@ -45,6 +45,7 @@ legenp              legendreP
 legenq              legendreQ
 polylog             polylog
 sn                  sn
+sqrt                sqrt
 struveh             struveH
 struvel             struveL
 whitm               whittakerM
