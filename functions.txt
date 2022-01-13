@@ -44,6 +44,7 @@ lambertw            lambertW
 laguerre            laguerre
 legenp              legendreP
 legenq              legendreQ
+loggamma            logGamma
 polylog             polylog
 sn                  sn
 sqrt                sqrt
