@@ -16,6 +16,8 @@ besseli             besselI
 besselj             besselJ
 besselk             besselK
 bessely             besselY
+chi                 coshIntegral
+ci                  cosIntegral
 cn                  cn
 digamma             digamma
 dn                  dn
@@ -44,8 +46,11 @@ lambertw            lambertW
 laguerre            laguerre
 legenp              legendreP
 legenq              legendreQ
+li                  logIntegral
 loggamma            logGamma
 polylog             polylog
+shi                 sinhIntegral
+si                  sinIntegral
 sn                  sn
 sqrt                sqrt
 struveh             struveH
