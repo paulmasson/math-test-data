@@ -27,7 +27,7 @@ if len( sys.argv ) > 2:
 file = open( 'functions.txt' )
 d = dict( [line.split() for line in file] )
 
-f = open( 'unit-circle/' + d[function] + s + '.txt', 'w' )
+f = open( 'complex-unit-circle/' + d[function] + s + '.txt', 'w' )
 
 start = -1.5
 step = 1 / float(33)
