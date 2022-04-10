@@ -34,6 +34,8 @@ python plane.py ellippi [1] [.5]
 
 The imaginary unit is "j" in Python. The resulting file name will contain an "i" in its place for legibility.
 
+In a few cases the order of arguments differs between mpmath and Math, notably the Lambert W function. In these rare cases it is simplest to rename the output files to adjust input to Math.
+
 Data on the complex unit circle and the complex axes are generated similarly using the Python files `circle.py` and `axes.py` and following the same conventions for additional parameters. The complex unit circle data has the domain [-1.5,1.5] in both directions and the complex axes [-49.5,49.5] in both directions.
 
 ### Visualizations ###
