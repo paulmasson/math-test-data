@@ -2,6 +2,8 @@
 from mpmath import *
 import sys
 
+# mp.prec = 200 # for Hankel functions
+
 def sn( x, m ):
   return ellipfun( 'sn', x, m )
 
